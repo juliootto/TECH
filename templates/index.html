@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,15 +6,30 @@
     <meta charset="UTF-8">
     <!-- Configura a viewport para garantir que a página seja responsiva em diferentes dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
     <!-- Título da página que aparece na aba do navegador -->
-    <title>Hello World Test Page</title>
+    <title>Tech</title>
     <!--
         Este é um arquivo HTML básico para testar a renderização de páginas.
         Ele exibe uma mensagem simples "Hello, World!" e um parágrafo de texto.
     -->
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple test page</p>
+    <header>
+        <img src="{% static 'assets/logo.jpeg' %}" alt="uma pessoa feliz" class="logo">
+    </header>
+    
+    <main>
+        <h1>Autenticação com OAuth 2.0</h1>
+        <div class="social-media">
+            <div class="social-media-details">
+                <a href="https://github.com/login/oauth/authorize?client_id=">
+                    <img src="{% static 'assets/github.svg' %}" alt="icone para realizar autnticação com o GitHub" class="social-media-icon">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
